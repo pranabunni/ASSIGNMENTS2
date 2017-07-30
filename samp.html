@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+/* COMMON RADIO AND CHECKBOX STYLES  */
+input[type=radio]{
+  /* Hide original inputs */
+  visibility: hidden;
+  position: absolute;
+}
+input[type=radio] + label:before
+{
+  height:12px;
+  width:12px;
+  margin-right: 2px;
+  content: " ";
+  display:inline-block;
+  vertical-align: baseline;
+  border: 1px solid #ccd9ff;
+}
+input[type=radio]:checked + label:before
+{
+  background:red;
+ 
+
+}
+
+/* CUSTOM RADIO AND CHECKBOX STYLES */
+input[type=radio] + label:before{
+  border-radius:50%;
+
+}
+
+
+</style>
+</head>
+<body>
+<input type="radio" name="r" id="r1"><label for="r1">Radio 1</label>
+<input type="radio" name="r" id="r2"><label for="r2">Radio 2</label>
+
+</body>
+<form action="#">
+  <label for="male">Male</label>
+  <input type="radio" name="gender" id="male" value="male"><br>
+  <label for="female">Female</label>
+  <input type="radio" name="gender" id="female" value="female"><br>
+  <label for="other">Other</label>
+  <input type="radio" name="gender" id="other" value="other"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</html>
